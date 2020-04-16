@@ -13,7 +13,7 @@ import (
 
 const dataDir = "./data/"
 const tokensFile = dataDir + "tokens.bin"
-const address = ":8080"
+const address = ":1264"
 const suffix = ".s1"
 var authPrefix = []byte("Bearer ")
 
