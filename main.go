@@ -99,12 +99,13 @@ func dbGenericRouteGet(ctx *fasthttp.RequestCtx) {
 
 	if (ok) {
 		keys := getKeys(token)
-		if keys != nil {
-			res, err := json.Marshal(keys)
-			if err == nil {
-				ctx.Write(res)
-				return
-			}
+		if keys == nil {
+			keys = []string{}
+		}
+		res, err := json.Marshal(keys)
+		if err == nil {
+			ctx.Write(res)
+			return
 		}
 
 		ctx.Error(fasthttp.StatusMessage(fasthttp.StatusInternalServerError), fasthttp.StatusInternalServerError)
