@@ -31,7 +31,6 @@ func tokenRoute(ctx *fasthttp.RequestCtx) {
 }
 
 func dbRouteGet(ctx *fasthttp.RequestCtx) {
-	ctx.Response.Header.Set("Access-Control-Allow-Origin", "*")
 	token, ok := getToken(ctx)
 
 	if (ok) {
@@ -56,7 +55,6 @@ func dbRouteGet(ctx *fasthttp.RequestCtx) {
 }
 
 func dbRoutePut(ctx *fasthttp.RequestCtx) {
-	ctx.Response.Header.Set("Access-Control-Allow-Origin", "*")
 	token, ok := getToken(ctx)
 
 	if (ok) {
@@ -77,7 +75,6 @@ func dbRoutePut(ctx *fasthttp.RequestCtx) {
 }
 
 func dbRouteDelete(ctx *fasthttp.RequestCtx) {
-	ctx.Response.Header.Set("Access-Control-Allow-Origin", "*")
 	token, ok := getToken(ctx)
 
 	if (ok) {
@@ -98,7 +95,6 @@ func dbRouteDelete(ctx *fasthttp.RequestCtx) {
 }
 
 func dbGenericRouteGet(ctx *fasthttp.RequestCtx) {
-	ctx.Response.Header.Set("Access-Control-Allow-Origin", "*")
 	token, ok := getToken(ctx)
 
 	if (ok) {
