@@ -17,7 +17,7 @@ func storeTokens() {
 
 	err := encoder.Encode(tokens)
 	if err != nil {
-		panic("Error encoding glob!")
+		panic("Error encoding gob!")
 	}
 
 	ioutil.WriteFile(tokensFile, buffer.Bytes(), 0644)
